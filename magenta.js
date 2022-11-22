@@ -111,7 +111,7 @@ playButton.addEventListener('click', function() {
     osc.type = document.getElementById('waveform1').value; //choose your favorite waveform
     gainNode = audioCtx.createGain();
     lfo = audioCtx.createOscillator();
-    lfo.frequency.value = document.getElementById('lfoFreq').value;
+    lfo.frequency.value = document.getElementById('lfoFreq').value / 10;
     lfo.type = document.getElementById('lfowaveform').value;
     lfo.connect(gainNode);
     lfo.start();
